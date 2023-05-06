@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+import java.util.regex.Pattern;
+
 public class CalculatorController {
 
     @FXML
@@ -14,19 +16,28 @@ public class CalculatorController {
     private double secondNumber = 0;
     private String currentOperation = "";
 
+    private boolean operationSelected = false;
+
     @FXML
     private void handleNumberButtonAction(ActionEvent event) {
         Button button = (Button) event.getSource();
         String currentText = display.getText();
-        display.setText(currentText + button.getText());
+        if (operationSelected) {
+            display.setText(currentText + button.getText());
+            operationSelected = false;
+        } else {
+            display.setText(currentText + button.getText());
+        }
     }
+
 
     @FXML
     private void handleOperationButtonAction(ActionEvent event) {
         Button button = (Button) event.getSource();
         firstNumber = Double.parseDouble(display.getText());
-        display.setText("");
         currentOperation = button.getText();
+        display.setText(display.getText() + currentOperation);
+        operationSelected = true;
     }
 
     @FXML
@@ -38,8 +49,21 @@ public class CalculatorController {
     }
 
     @FXML
+    private void handleClearButtonAction(ActionEvent event) {
+        display.setText("");
+        firstNumber = 0;
+        secondNumber = 0;
+        currentOperation = "";
+    }
+
+    @FXML
     private void handleEqualButtonAction(ActionEvent event) {
-        secondNumber = Double.parseDouble(display.getText());
+        String[] numbers = display.getText().split(Pattern.quote(currentOperation), 2);
+        if (numbers.length < 2) {
+            // Error handling: the second number is missing
+            return;
+        }
+        double secondNumber = Double.parseDouble(numbers[1]);
         double result;
 
         switch (currentOperation) {
@@ -65,14 +89,6 @@ public class CalculatorController {
         }
 
         display.setText(String.valueOf(result));
-        currentOperation = "";
-    }
-
-    @FXML
-    private void handleClearButtonAction(ActionEvent event) {
-        display.setText("");
-        firstNumber = 0;
-        secondNumber = 0;
         currentOperation = "";
     }
 }
