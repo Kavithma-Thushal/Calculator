@@ -16,9 +16,8 @@ public class AppInitializer extends Application {
 
         Parent parent=FXMLLoader.load(getClass().getResource("view/calculator.fxml"));
         Scene scene=new Scene(parent);
-
-        primaryStage.setTitle("Simple Calculator");
         primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
