@@ -10,12 +10,8 @@ public class AppInitializer extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        /*FXMLLoader loader = new FXMLLoader(getClass().getResource("view/calculator.fxml"));
-        VBox root = loader.load();
-        Scene scene = new Scene(root);*/
-
-        Parent parent=FXMLLoader.load(getClass().getResource("view/calculator.fxml"));
-        Scene scene=new Scene(parent);
+        Parent parent = FXMLLoader.load(getClass().getResource("view/calculator.fxml"));
+        Scene scene = new Scene(parent);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
         primaryStage.show();
