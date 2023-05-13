@@ -11,33 +11,36 @@ public class CalculatorController {
 
     @FXML
     private TextField display;
-
-    private double firstNumber = 0;
-    private double secondNumber = 0;
-    private String currentOperation = "";
-
-    private boolean operationSelected = false;
+    private double number = 0;
+    private String operation = "";
+    private boolean selectedOperation = false;
 
     @FXML
-    private void handleNumberButtonAction(ActionEvent event) {
+    private void numberButtonOnAction(ActionEvent event) {
         Button button = (Button) event.getSource();
         String currentText = display.getText();
-        if (operationSelected) {
+        if (selectedOperation) {
             display.setText(currentText + button.getText());
-            operationSelected = false;
+            selectedOperation = false;
         } else {
             display.setText(currentText + button.getText());
         }
     }
 
+    @FXML
+    private void operationButtonOnAction(ActionEvent event) {
+        Button button = (Button) event.getSource();
+        number = Double.parseDouble(display.getText());
+        operation = button.getText();
+        display.setText(display.getText() + operation);
+        selectedOperation = true;
+    }
 
     @FXML
-    private void handleOperationButtonAction(ActionEvent event) {
-        Button button = (Button) event.getSource();
-        firstNumber = Double.parseDouble(display.getText());
-        currentOperation = button.getText();
-        display.setText(display.getText() + currentOperation);
-        operationSelected = true;
+    private void clearButtonOnAction(ActionEvent event) {
+        display.setText("");
+        number = 0;
+        operation = "";
     }
 
     @FXML
@@ -49,39 +52,30 @@ public class CalculatorController {
     }
 
     @FXML
-    private void handleClearButtonAction(ActionEvent event) {
-        display.setText("");
-        firstNumber = 0;
-        secondNumber = 0;
-        currentOperation = "";
-    }
-
-    @FXML
-    private void handleEqualButtonAction(ActionEvent event) {
-        String[] numbers = display.getText().split(Pattern.quote(currentOperation), 2);
+    private void equalButtonOnAction(ActionEvent event) {
+        String[] numbers = display.getText().split(Pattern.quote(operation), 2);
         if (numbers.length < 2) {
-            // Error handling: the second number is missing
             return;
         }
         double secondNumber = Double.parseDouble(numbers[1]);
         double result;
 
-        switch (currentOperation) {
+        switch (operation) {
             case "+":
-                result = firstNumber + secondNumber;
+                result = number + secondNumber;
                 break;
             case "-":
-                result = firstNumber - secondNumber;
+                result = number - secondNumber;
                 break;
             case "*":
-                result = firstNumber * secondNumber;
+                result = number * secondNumber;
                 break;
             case "/":
                 if (secondNumber == 0) {
                     display.setText("Error");
                     return;
                 } else {
-                    result = firstNumber / secondNumber;
+                    result = number / secondNumber;
                 }
                 break;
             default:
@@ -89,6 +83,6 @@ public class CalculatorController {
         }
 
         display.setText(String.valueOf(result));
-        currentOperation = "";
+        operation = "";
     }
 }

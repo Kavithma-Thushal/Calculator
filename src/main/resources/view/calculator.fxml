@@ -12,61 +12,61 @@
           xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
           fx:controller="lk.ijse.calculator.controller.CalculatorController">
     <TextField fx:id="display" editable="false" focusTraversable="false" styleClass="display" GridPane.columnSpan="4"/>
-    <Button focusTraversable="false" onAction="#handleNumberButtonAction" styleClass="button" text="1"
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="1"
             GridPane.rowIndex="1">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#handleNumberButtonAction" styleClass="button" text="2"
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="2"
             GridPane.columnIndex="1" GridPane.rowIndex="1">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#handleNumberButtonAction" styleClass="button" text="3"
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="3"
             GridPane.columnIndex="2" GridPane.rowIndex="1">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#handleNumberButtonAction" styleClass="button" text="4"
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="4"
             GridPane.rowIndex="2">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#handleNumberButtonAction" styleClass="button" text="5"
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="5"
             GridPane.columnIndex="1" GridPane.rowIndex="2">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#handleNumberButtonAction" styleClass="button" text="6"
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="6"
             GridPane.columnIndex="2" GridPane.rowIndex="2">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#handleNumberButtonAction" styleClass="button" text="7"
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="7"
             GridPane.rowIndex="3">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#handleNumberButtonAction" styleClass="button" text="8"
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="8"
             GridPane.columnIndex="1" GridPane.rowIndex="3">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#handleNumberButtonAction" styleClass="button" text="9"
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="9"
             GridPane.columnIndex="2" GridPane.rowIndex="3">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#handleNumberButtonAction" styleClass="button" text="0"
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="0"
             GridPane.columnIndex="1" GridPane.rowIndex="4">
         <cursor>
             <Cursor fx:constant="HAND"/>
@@ -78,37 +78,36 @@
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#handleOperationButtonAction" styleClass="button" text="+"
+    <Button focusTraversable="false" onAction="#operationButtonOnAction" styleClass="button" text="+"
             GridPane.columnIndex="3" GridPane.rowIndex="1">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#handleOperationButtonAction" styleClass="button" text="-"
+    <Button focusTraversable="false" onAction="#operationButtonOnAction" styleClass="button" text="-"
             GridPane.columnIndex="3" GridPane.rowIndex="2">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#handleOperationButtonAction" styleClass="button" text="*"
+    <Button focusTraversable="false" onAction="#operationButtonOnAction" styleClass="button" text="*"
             GridPane.columnIndex="3" GridPane.rowIndex="3">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#handleOperationButtonAction" styleClass="button" text="/"
+    <Button focusTraversable="false" onAction="#operationButtonOnAction" styleClass="button" text="/"
             GridPane.columnIndex="3" GridPane.rowIndex="4">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#handleClearButtonAction" styleClass="button" text="C"
-            GridPane.rowIndex="4">
+    <Button focusTraversable="false" onAction="#clearButtonOnAction" styleClass="button" text="C" GridPane.rowIndex="4">
         <cursor>
             <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#handleEqualButtonAction" styleClass="button" text="="
+    <Button focusTraversable="false" onAction="#equalButtonOnAction" styleClass="button" text="="
             GridPane.columnIndex="2" GridPane.rowIndex="4">
         <cursor>
             <Cursor fx:constant="HAND"/>
