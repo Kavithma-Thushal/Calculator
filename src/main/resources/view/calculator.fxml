@@ -60,11 +60,6 @@
             <Cursor fx:constant="HAND" />
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#decimalButtonOnAction" styleClass="button" text="." GridPane.columnIndex="2" GridPane.rowIndex="4">
-        <cursor>
-            <Cursor fx:constant="HAND" />
-        </cursor>
-    </Button>
     <Button focusTraversable="false" onAction="#operationButtonOnAction" styleClass="button" text="+" GridPane.columnIndex="3" GridPane.rowIndex="1">
         <cursor>
             <Cursor fx:constant="HAND" />
@@ -85,7 +80,7 @@
             <Cursor fx:constant="HAND" />
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#clearButtonOnAction" styleClass="button" text="C" GridPane.rowIndex="4">
+    <Button focusTraversable="false" onAction="#decimalButtonOnAction" styleClass="button" text="." GridPane.rowIndex="4">
         <cursor>
             <Cursor fx:constant="HAND" />
         </cursor>
