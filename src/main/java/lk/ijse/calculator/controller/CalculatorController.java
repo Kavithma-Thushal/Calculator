@@ -11,26 +11,26 @@ public class CalculatorController {
 
     @FXML
     private TextField display;
-    private double number = 0;
-    private String operation = "";
-    private boolean selectedOperation = false;
+    private double firstNumber;
+    private String operation;
+    private boolean selectedOperation;
 
     @FXML
     private void numberButtonOnAction(ActionEvent event) {
         Button button = (Button) event.getSource();
-        String currentText = display.getText();
+        String currentNumber = display.getText();
         if (selectedOperation) {
-            display.setText(currentText + button.getText());
+            display.setText(currentNumber + button.getText());
             selectedOperation = false;
         } else {
-            display.setText(currentText + button.getText());
+            display.setText(currentNumber + button.getText());
         }
     }
 
     @FXML
     private void operationButtonOnAction(ActionEvent event) {
         Button button = (Button) event.getSource();
-        number = Double.parseDouble(display.getText());
+        firstNumber = Double.parseDouble(display.getText());
         operation = button.getText();
         display.setText(display.getText() + operation);
         selectedOperation = true;
@@ -38,9 +38,9 @@ public class CalculatorController {
 
     @FXML
     private void clearButtonOnAction(ActionEvent event) {
-        display.setText("");
-        number = 0;
-        operation = "";
+        display.clear();
+        firstNumber = 0;
+        operation = null;
     }
 
     @FXML
@@ -62,20 +62,20 @@ public class CalculatorController {
 
         switch (operation) {
             case "+":
-                result = number + secondNumber;
+                result = firstNumber + secondNumber;
                 break;
             case "-":
-                result = number - secondNumber;
+                result = firstNumber - secondNumber;
                 break;
             case "*":
-                result = number * secondNumber;
+                result = firstNumber * secondNumber;
                 break;
             case "/":
                 if (secondNumber == 0) {
-                    display.setText("Error");
+                    display.setText("error");
                     return;
                 } else {
-                    result = number / secondNumber;
+                    result = firstNumber / secondNumber;
                 }
                 break;
             default:
@@ -83,6 +83,6 @@ public class CalculatorController {
         }
 
         display.setText(String.valueOf(result));
-        operation = "";
+        operation = null;
     }
 }
