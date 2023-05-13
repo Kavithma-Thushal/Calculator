@@ -44,7 +44,7 @@ public class CalculatorController {
     }
 
     @FXML
-    private void handleDecimalButtonAction(ActionEvent event) {
+    private void decimalButtonOnAction(ActionEvent event) {
         String currentText = display.getText();
         if (!currentText.contains(".")) {
             display.setText(currentText + ".");
