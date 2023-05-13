@@ -8,102 +8,120 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane alignment="center" hgap="10" stylesheets="@../style/calculator.css" vgap="10" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.calculator.controller.CalculatorController">
-    <TextField fx:id="display" editable="false" focusTraversable="false" styleClass="display" GridPane.columnSpan="4" />
-    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="1" GridPane.rowIndex="1">
+<GridPane alignment="center" hgap="10" stylesheets="@../style/calculator.css" vgap="10"
+          xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="lk.ijse.calculator.controller.CalculatorController">
+    <TextField fx:id="display" editable="false" focusTraversable="false" styleClass="display" GridPane.columnSpan="4"/>
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="1"
+            GridPane.rowIndex="1">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="2" GridPane.columnIndex="1" GridPane.rowIndex="1">
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="2"
+            GridPane.columnIndex="1" GridPane.rowIndex="1">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="3" GridPane.columnIndex="2" GridPane.rowIndex="1">
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="3"
+            GridPane.columnIndex="2" GridPane.rowIndex="1">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="4" GridPane.rowIndex="2">
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="4"
+            GridPane.rowIndex="2">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="5"
+            GridPane.columnIndex="1" GridPane.rowIndex="2">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="6" GridPane.columnIndex="2" GridPane.rowIndex="2">
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="6"
+            GridPane.columnIndex="2" GridPane.rowIndex="2">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="7" GridPane.rowIndex="3">
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="7"
+            GridPane.rowIndex="3">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="8" GridPane.columnIndex="1" GridPane.rowIndex="3">
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="8"
+            GridPane.columnIndex="1" GridPane.rowIndex="3">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="9" GridPane.columnIndex="2" GridPane.rowIndex="3">
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="9"
+            GridPane.columnIndex="2" GridPane.rowIndex="3">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+    <Button focusTraversable="false" onAction="#numberButtonOnAction" styleClass="button" text="0"
+            GridPane.columnIndex="1" GridPane.rowIndex="4">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#operationButtonOnAction" styleClass="button" text="+" GridPane.columnIndex="3" GridPane.rowIndex="1">
+    <Button focusTraversable="false" onAction="#operationButtonOnAction" styleClass="button" text="+"
+            GridPane.columnIndex="3" GridPane.rowIndex="1">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#operationButtonOnAction" styleClass="button" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
+    <Button focusTraversable="false" onAction="#operationButtonOnAction" styleClass="button" text="-"
+            GridPane.columnIndex="3" GridPane.rowIndex="2">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#operationButtonOnAction" styleClass="button" text="*" GridPane.columnIndex="3" GridPane.rowIndex="3">
+    <Button focusTraversable="false" onAction="#operationButtonOnAction" styleClass="button" text="*"
+            GridPane.columnIndex="3" GridPane.rowIndex="3">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#operationButtonOnAction" styleClass="button" text="/" GridPane.columnIndex="3" GridPane.rowIndex="4">
+    <Button focusTraversable="false" onAction="#operationButtonOnAction" styleClass="button" text="/"
+            GridPane.columnIndex="3" GridPane.rowIndex="4">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#decimalButtonOnAction" styleClass="button" text="." GridPane.rowIndex="4">
+    <Button focusTraversable="false" onAction="#decimalButtonOnAction" styleClass="button" text="."
+            GridPane.rowIndex="4">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
-    <Button focusTraversable="false" onAction="#equalButtonOnAction" styleClass="button" text="=" GridPane.columnIndex="2" GridPane.rowIndex="4">
+    <Button focusTraversable="false" onAction="#equalButtonOnAction" styleClass="button" text="="
+            GridPane.columnIndex="2" GridPane.rowIndex="4">
         <cursor>
-            <Cursor fx:constant="HAND" />
+            <Cursor fx:constant="HAND"/>
         </cursor>
     </Button>
     <padding>
-        <Insets bottom="10" left="10" right="10" top="10" />
+        <Insets bottom="10" left="10" right="10" top="10"/>
     </padding>
     <columnConstraints>
-        <ColumnConstraints />
-        <ColumnConstraints />
-        <ColumnConstraints />
-        <ColumnConstraints />
+        <ColumnConstraints/>
+        <ColumnConstraints/>
+        <ColumnConstraints/>
+        <ColumnConstraints/>
     </columnConstraints>
     <rowConstraints>
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
-        <RowConstraints />
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
+        <RowConstraints/>
     </rowConstraints>
 </GridPane>
