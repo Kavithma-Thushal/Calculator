@@ -25,3 +25,4 @@ This project is licensed under the [MIT](LICENSE) license.
 If you hava any bugs or issues ,If you want to explain code pleace contact me on :<br/>
 [kavithmathushal9007@gmail.com](https://www.kavithmathushal9007@gmail.com)
 
+![Screenshot 2023-07-04 133027](https://github.com/Thushal2001/Simple-Calculator/assets/125787087/49ad34dc-f9c9-477e-a45a-95706f6e44df)
